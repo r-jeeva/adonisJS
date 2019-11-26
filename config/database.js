@@ -13,7 +13,7 @@ module.exports = {
   | interacting with SQL databases.
   |
   */
-  connection: Env.get('DB_CONNECTION', 'sqlite'),
+  connection: Env.get('DEFAULT_DB_CONNECTION', 'sqlite'),
 
   /*
   |--------------------------------------------------------------------------
@@ -73,6 +73,28 @@ module.exports = {
       user: Env.get('DB_USER', 'root'),
       password: Env.get('DB_PASSWORD', ''),
       database: Env.get('DB_DATABASE', 'adonis')
+    }
+  },
+
+  master: {
+    client: 'mysql',
+    connection: {
+      host: Env.get('MATER_DB_HOST', 'localhost'),
+      port: Env.get('MATER_DB_PORT', ''),
+      user: Env.get('MATER_DB_USER', 'root'),
+      password: Env.get('MATER_DB_PASSWORD', ''),
+      database: Env.get('MATER_DB_DATABASE', 'adonisapp')
+    }
+  },
+
+  slave: {
+    client: 'mysql',
+    connection: {
+      host: Env.get('SLAVE_DB_HOST', 'localhost'),
+      port: Env.get('SLAVE_DB_PORT', ''),
+      user: Env.get('SLAVE_DB_USER', 'root'),
+      password: Env.get('SLAVE_DB_PASSWORD', ''),
+      database: Env.get('SLAVE_DB_DATABASE', 'adonisapp')
     }
   }
 }
