@@ -79,11 +79,11 @@ module.exports = {
   master: {
     client: 'mysql',
     connection: {
-      host: Env.get('MATER_DB_HOST', 'localhost'),
-      port: Env.get('MATER_DB_PORT', ''),
-      user: Env.get('MATER_DB_USER', 'root'),
-      password: Env.get('MATER_DB_PASSWORD', ''),
-      database: Env.get('MATER_DB_DATABASE', 'adonisapp')
+      host: Env.get('MASTER_DB_HOST', 'localhost'),
+      port: Env.get('MASTER_DB_PORT', ''),
+      user: Env.get('MASTER_DB_USER', 'root'),
+      password: Env.get('MASTER_DB_PASSWORD', ''),
+      database: Env.get('MASTER_DB_DATABASE', 'adonisapp')
     }
   },
 
